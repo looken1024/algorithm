@@ -4,7 +4,7 @@
 # 遇到 fatal: unable to access 并提示 Encountered end of file 错误，通常与网络连接、Git 配置或认证问题有关。以下是分步解决方案：
 
 ## 1. 切换到 SSH 协议
-git remote set-url origin git@github.com:looken1024/scripts.git
+git remote set-url origin git@github.com:looken1024/algorithm.git
 
 ## 2. 检查网络连通性
 ping github.com
