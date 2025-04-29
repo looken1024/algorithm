@@ -4,3 +4,4 @@ project(algorithm)
 
 add_subdirectory(加密)
 add_subdirectory(哈希)
+add_subdirectory(排序)
