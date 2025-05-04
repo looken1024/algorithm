@@ -140,7 +140,7 @@ print(f'模型准确率: {accuracy:.2f}')
 
 完成以上代码，输出结果为：
 
-![评估结果](https://github.com/looken1024/algorithm/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/images/infoflow 2025-05-04 20-55-08.png)
+![评估结果](https://github.com/looken1024/algorithm/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/images/infoflow%202025-05-04%2020-54-55.png)
 
 ### 步骤 7：可视化结果（可选）
 
