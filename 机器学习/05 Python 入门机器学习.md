@@ -74,6 +74,7 @@ from sklearn.metrics import accuracy_score
 ```
 
 ### 步骤 2：加载数据
+
 加载鸢尾花数据集：
 
 ```python
@@ -90,13 +91,7 @@ print(X.head())
 
 打印输出数据如下所示：
 
-       sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
-   0                5.1               3.5                1.4               0.2
-   1                4.9               3.0                1.4               0.2
-   2                4.7               3.2                1.3               0.2
-   3                4.6               3.1                1.5               0.2
-   4                5.0               3.6                1.4               0.2
-
+![打印数据](https://github.com/looken1024/algorithm/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/images/infoflow 2025-05-04 20-54-55.png)
 
 ### 步骤 3：数据集划分
 
@@ -145,7 +140,7 @@ print(f'模型准确率: {accuracy:.2f}')
 
 完成以上代码，输出结果为：
 
-模型准确率: 1.00
+![评估结果](https://github.com/looken1024/algorithm/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/images/infoflow 2025-05-04 20-55-08.png)
 
 ### 步骤 7：可视化结果（可选）
 
