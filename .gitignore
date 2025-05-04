@@ -2,3 +2,7 @@
 */*.bak
 build
 */main
+红黑树/rbtree.o
+红黑树/rbtree-tst.o
+红黑树/rbtree-tst
+
