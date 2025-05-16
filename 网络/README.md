@@ -170,6 +170,7 @@ HTTPS:默认使用端口 443。
 3) 性能:
 
 HTTP: 无加密过程，连接建立速度稍快。
+
 HTTPS: 基于 HTTP上又加了SSL(Secure Sockets Layer)或TLS(Transport Layer Security)协议来实现的加密传输,加解密过程增加了计算开销，握手时间较长，但现代硬件和协议优化已使性能差距减小。 
 
 # SSL协议
