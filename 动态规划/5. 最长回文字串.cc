@@ -50,3 +50,33 @@ public:
         return result;
     }
 };
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        vector<vector<int>> d(s.size() + 2, vector<int>(s.size() + 2, 0));
+        string result = "";
+        int max_len = 0;
+        int pos = -1;
+        for (int i = 1; i <= s.size(); i++) {
+            for (int j = s.size(); j > i; j--) {
+                if (s[i - 1] == s[j - 1]) {
+                    d[i][j] = max(d[i][j], d[i - 1][j + 1] + 2);
+                }
+            }
+            d[i][i] = max(d[i][i], d[i - 1][i + 1] + 1);
+        }
+        for (int i = 1; i <= s.size(); i++) {
+            if (d[i][i] > max_len) {
+                max_len = d[i][i];
+                pos = i - 1 - (max_len - 1) / 2;
+            }
+            if (d[i - 1][i] > max_len) {
+                max_len = d[i - 1][i];
+                pos = i - 1 - max_len / 2;
+            }
+        }
+        cout << pos << ", " << max_len << endl;
+        return s.substr(pos, max_len);
+    }
+};

@@ -52,3 +52,37 @@ public:
         return s[obstacleGrid.size() - 1][obstacleGrid[0].size() - 1];
     }
 };
+
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        int m = obstacleGrid.size();
+        int n = obstacleGrid[0].size();
+        vector<vector<int>> s(m, vector<int>(n, 0));
+        for (int i = 0; i < m; i++) {
+            if (obstacleGrid[i][0] == 1) {
+                break;
+            } else {
+                s[i][0] = 1;
+            }
+        }
+        for (int j = 0; j < n; j++) {
+            if (obstacleGrid[0][j] == 1) {
+                break;
+            } else {
+                s[0][j] = 1;
+            }
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (obstacleGrid[i][j] == 1) {
+                    s[i][j] = 0;
+                } else {
+                    cout << i << ":" << j << endl;
+                    s[i][j] = s[i - 1][j] + s[i][j - 1];
+                }
+            }
+        }
+        return s[m - 1][n - 1];
+    }
+};

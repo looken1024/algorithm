@@ -38,3 +38,28 @@ public:
         return result;
     }
 };
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int result = max_vlaue(nums);
+        int sum = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (sum < 0) {
+                sum = nums[i];
+            } else {
+                sum += nums[i];
+                result = max(result, sum);
+            }
+        }
+        return result;
+    }
+
+    int max_vlaue(vector<int>& nums) {
+        int result = nums[0];
+        for (int i = 1; i < nums.size(); i++) {
+            result = max(result, nums[i]);
+        }
+        return result;
+    }
+};
