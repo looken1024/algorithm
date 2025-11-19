@@ -27,6 +27,7 @@ n 为偶数
 class Solution {
 public:
     int reverseBits(int n) {
+        //无符号整数的右移是逻辑右移，高位补0，而左移也是逻辑左移，低位补0
         uint32_t l = 1 << 31;
         uint32_t r = 1;
         bool l2;
