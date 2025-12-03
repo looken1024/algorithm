@@ -38,6 +38,32 @@ def kmp_search(string, patt):
 
     return -1                                               # 未招到
 
+def kmp_search_all(string, pattern):                        # 多匹配版本(DeepSeek生成)
+    """查找所有匹配位置"""
+    if not pattern:
+        return []
+
+    next_arr = build_next(pattern)
+    i = 0
+    j = 0
+    results = []
+
+    while i < len(string):
+        if string[i] == pattern[j]:
+            i += 1
+            j += 1
+        elif j > 0:
+            j = next_arr[j - 1]
+        else:
+            i += 1
+
+        if j == len(pattern):
+            results.append(i - j)
+            # 继续查找下一个匹配
+            j = next_arr[j - 1]
+
+    return results
+
 ```
 
 
